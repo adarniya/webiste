@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adarniya Fame - Unleash Your Social Media Empire</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Adarniya Fame</h1>
+    <p>Unleash Your Social Media Empire</p>
+  </header>
+   <nav class="fixed-nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Why Choose Us</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <div class="container">
+      <h2>The Unstoppable Force of Adarniya Fame</h2>
+      <p>In the cutthroat world of social media, time is the ultimate currency, and every moment wasted is a missed opportunity to claim your throne. While others are thriving, amassing legions of followers and basking in the glory of success, you find yourself stuck in the shadows, watching your dreams fade away. But fear not, for salvation lies within your grasp – the unrivaled prowess of Adarniya Fame awaits to elevate you to unprecedented heights.</p>
+      <a href="#services" class="cta-btn">Get Started Now</a>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Why Choose Adarniya Fame?</h2>
+      <div class="service-card">
+        <h3>The Cost Of Inaction: A Lost Battle</h3>
+        <p>As you linger in the realm of uncertainty, your competitors are soaring to new horizons, seizing golden opportunities, and leaving you in their wake. Every day that passes without Adarniya Fame propels you further away from the fame and fortune you yearn for. Your content may be remarkable, but without the power of a massive follower base, your voice remains but a whisper in the vast echo chamber of social media.</p>
+      </div>
+      <div class="service-card">
+        <h3>Dominate or Be Dominated: The Adarniya Fame Edge</h3>
+        <p>Adarniya Fame isn't just another service; it's the most potent weapon in your arsenal to conquer the digital landscape. While others tread cautiously, we unleash an avalanche of real and active followers, surging like a tidal wave to propel you to the forefront of your industry. Imagine the rush of adrenaline as your follower count skyrockets, signaling your ascension to social media royalty. With us by your side, you wield the power to dominate, leaving your competitors in awe and trailing in your wake.</p>
+      </div>
+      <div class="service-card">
+        <h3>The Lost Moments of Greatness: Grasp Them Now</h3>
+        <p>The moments of greatness you crave are slipping through your fingers like grains of sand. Each second that ticks away without Adarniya Fame is a moment where potential collaborations, partnerships, and life-changing opportunities pass you by. Your competitors are leveraging their influencer status, rubbing shoulders with brands, and leaving their mark on the world. The cost of hesitancy is immeasurable, and the time for action is NOW.</p>
+      </div>
+      <div class="service-card">
+        <h3>The Elite Circle: Where Dreams Become Reality</h3>
+        <p>Success on social media is the holy grail of the digital era, and Adarniya Fame is your key to unlock its door. Don't settle for ordinary when you can be extraordinary. Join the ranks of the elite circle of influencers and content creators who have harnessed our unrivaled services to craft their digital empires. The satisfaction of watching your dreams come to life, your voice resonating with a legion of followers, and your influence transforming industries is within your grasp.</p>
+      </div>
+      <div class="service-card">
+        <h3>Embrace Your Destiny: The Moment is Yours</h3>
+        <p>Success on social media is the holy grail of the digital era, and Adarniya Fame is your key to unlock its door. Don't settle for ordinary when you can be extraordinary. Join the ranks of the elite circle of influencers and content creators who have harnessed our unrivaled services to craft their digital empires. The satisfaction of watching your dreams come to life, your voice resonating with a legion of followers, and your influence transforming industries is within your grasp.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-card">
+        <h2>Contact Us</h2>
+        <form action="submit-form.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+   </section>
+
+
+
+
+  <footer>
+    <section id="about" class="about">
+  <div class="container">
+    <div class="about-card">
+      <h2>About Us</h2>
+      <p>Welcome to our website! We are a passionate team dedicated to providing valuable information and resources on various topics.</p>
+      <p>Our mission is to make knowledge accessible and help people learn and grow. Whether it's technology, science, arts, or any other subject, we've got you covered!</p>
+    </div>
+  </div>
+</section>
+    <p>&copy; 2023 Adarniya Fame. All rights reserved.</p>
+  </footer>
+
+<script>
+  const header = document.querySelector("header");
+  const navBar = document.querySelector(".fixed-nav");
+  let prevScrollPos = window.pageYOffset;
+
+  window.addEventListener("scroll", () => {
+    const currentScrollPos = window.pageYOffset;
+    if (currentScrollPos > prevScrollPos) {
+      navBar.style.transform = "translateY(-100%)"; // Hide the nav when scrolling down
+    } else {
+      navBar.style.transform = "translateY(0)"; // Show the nav when scrolling up
+    }
+
+    prevScrollPos = currentScrollPos;
+  });
+</script>
+
+
+</body>
+</html>

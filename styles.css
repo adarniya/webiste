@@ -1,0 +1,200 @@
+/* Reset CSS */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+.hero {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+
+.services {
+  background-color: #fff;
+  padding: 2rem 0;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+/* Reset default text area resize behavior */
+textarea {
+  resize: none;
+}
+
+.contact {
+  background-color: #fff;
+  padding: 2rem 0;
+}
+
+.contact-card {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.contact-card h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  width: 100%; /* Adjust label width to fit within the container */
+}
+
+input,
+textarea {
+  width: 100%; /* Adjust form element width to fit within the container */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Optional: Add some responsive styles for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    padding: 0;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: inline-block; /* Add this line to enable scaling */
+  width: 100%; /* Add this line to enable scaling */
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+nav a:hover {
+/*  border-bottom: 2px solid #fff;*/
+  transform: scale(1.1);
+  filter: brightness(70%);
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  z-index: 1000;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+/* Add some margin to the header content so it doesn't overlap with the nav */
+header h1,
+header p {
+  margin-top: 0px;
+}
+
+.adjusted-nav {
+  position: relative; /* Adjusted position to be below the header */
+  top: 0;
+}
