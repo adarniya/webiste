@@ -1,3 +1,6 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css 2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 /* Reset CSS */
 body, h1, h2, h3, p, ul, li {
   margin: 0;
@@ -25,6 +28,8 @@ header h1 {
   background-color: #f9f9f9;
   text-align: center;
   padding: 2rem 0;
+  margin-top: 20px;
+
 }
 
 .container {
@@ -80,6 +85,37 @@ textarea {
 .contact-card h2 {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+/* Add this CSS to style the pricing boxes */
+.pricing {
+  padding: 2rem 0;
+}
+
+.containers {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+}
+
+.pricing-box {
+  flex-basis: calc(25% - 0.5rem);
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+@media screen and (max-width: 768px) {
+  .pricing-box {
+    flex-basis: calc(50% - 1rem);
+  }
 }
 
 
@@ -183,18 +219,238 @@ nav a:hover {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 1rem;
+  padding: 10px;
   z-index: 1000;
   transform: translateY(0);
   transition: transform 0.3s ease;
 }
-/* Add some margin to the header content so it doesn't overlap with the nav */
+/* Add some margin to the header content so it doesn't overlap with the nav 
 header h1,
 header p {
   margin-top: 0px;
 }
-
+/*
 .adjusted-nav {
   position: relative; /* Adjusted position to be below the header */
-  top: 0;
+  top: 0;*/
 }
+/* Regular CSS for Light Mode */
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* CSS for Dark Mode */
+.dark-mode body {
+  background-color: #333333;
+  color: #ffffff; /* Set text color to white in dark mode */
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content/Box */
+.modal-content {
+  max-width: 600px;
+  width: 100%;
+  min-height: 85vh;
+  background-color: #f9f9f9;
+  padding: 24px 20px;
+  border-radius: 16px;
+  margin-inline: 2rem;
+  margin: 2rem auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+   margin-bottom: 20px;}
+
+  .login-content {
+  width: 300px;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.loginHead {
+  background-color: #f9f9f9;
+  color: darkgrey;
+  text-align: center;
+  padding: 1rem;
+  position: relative
+}
+
+.loginHead h1 {
+  font-size: 2.5rem;
+}
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  padding: 7px 11px;
+  border-radius: 50%;
+}
+
+
+.email-log-in {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+ 
+}
+
+.email-log-in input {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 1px solid #333639;
+  outline: none;
+  padding: 20px 10px;
+  color: black;
+  font-size: 18px;
+  font-family: "Roboto";
+}
+
+
+input::placeholder {
+  opacity: 0; 
+}
+
+input + label {
+  position: absolute;
+  top: 20px;
+  
+  color: #71767b;
+  font-size: 18px;
+  pointer-events: none;
+  transition: 200ms ease;
+}
+
+input:focus {
+  outline: 1px solid darkred;
+}
+
+input:focus + label {
+  color:#71767b;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  top: 6px;
+  left: 10px;
+  font-size: 12px;
+}
+
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.primary-button {
+  width: 100%;
+  border-radius: 20px;
+  padding: 8px 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.primary-button {
+  background-color: transparent;
+  color: #0f1419; 
+}
+
+.primary-button:hover {
+  background-color: #e6e6e6;
+} 
+
+/*
+@import url("https://fonts.googleapis.com/css 2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+.input_field {
+position: relative;
+height: 45px;
+margin-top: 15px;
+width: 100%;
+}
+.refresh_button {
+position: absolute;
+top:50%;
+right: 10px;
+transform: translateY(-50%);
+background:#826afb;
+height: 30px;
+width:30px;
+border: none;
+border-radius: 4px;
+color:#fff;
+cursor: pointer;
+}
+.refresh_button:active {
+transform: translateY(-50%) scale(0.98);
+}
+.input_field input{
+height:100%;
+width:100%;
+outline: none;
+border: none;
+background: #f9f9f9;
+border-radius: 8px;
+}
+
+.input_field input {
+padding: 0 15px;
+border:1px solid rgba(e, 0, 0, 0.1);
+}
+.captcha_box input {
+color:#6b6b6b;
+font-size: 22px;
+pointer-events: none;
+}
+.captch_input input:focus {
+box-shadow:0 1px 1px rgba(e, 0,0, 0.08);
+}
+.message {
+font-size: 14px;
+margin: 14px 0;
+color:#826afb;
+
+}
+.message.active {
+display: block;
+}
+.button button {
+height:100%;
+width:100%;
+outline: none;
+border: none;
+background: #333;
+border-radius: 8px;
+user-select: none;
+}
+.button button:active {
+transform: scale(0.99)
+
+}
+.button.disabled {
+
+opacity: 0.6;
+pointer-events: none;
+;
+
+
+*/
