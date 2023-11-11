@@ -27,63 +27,60 @@
     </ul>
   </nav>
 
-<div id="loginModal" class="modal">
+  <div id="loginModal" class="modal">
 
-  <div class="modal-content">
-    <header class="loginHead">
-        <button id="close-button" class="close-button"></button>
-        <h1>Adarniya Fame</h1>
-        <p>Unleash Your Social Media Empire</p>
-      </header>
+    <div class="modal-content">
+      <header class="loginHead">
+          <button id="close-button" class="close-button"></button>
+          <h1>Adarniya Fame</h1>
+          <p>Unleash Your Social Media Empire</p>
+        </header>
 
-    
-    <div class="top-container">
-    
       
-      <div class="login-content">
+      <div class="top-container">
+      
+        
+        <div class="login-content">
 
-        <div class="email-log-in">
-          <input type="text" id="log-in" placeholder="Email" required>
-          <label for="log-in">Phone, email or username</label>
-        </div>
-
-        <div class="email-log-in">
-          <input type="text" id="log-in" placeholder="Email" required>
-          <label for="log-in">Enter Your Password</label>
-        </div>
-
-         <div class="input_field captcha_box"> 
-            <input type="text" value="" readonly />
-            <button class="refresh_button">
-              <i class="fa-solid fa-rotate-right"></i> 
-            </button>
+          <div class="email-log-in">
+            <input type="text" id="log-in" placeholder="Email" required>
+            <label for="log-in">Phone, email or username</label>
           </div>
 
-          <div class="input_field captcha_input">
-            <input type="text" placeholder="Enter captchas"/>
+          <div class="email-log-in">
+            <input type="text" id="log-in" placeholder="Email" required>
+            <label for="log-in">Enter Your Password</label>
+          </div>
+          <div class="captcha">
+            <div class="input_field captcha_box"> 
+              <input type="text" value="" readonly />
+            
+              <button class="refresh_button">
+                <i class="fa-solid fa-rotate-right"></i> 
+              </button>
+            </div>
+
+            <div class="input_field captcha_input">
+              <input type="text" placeholder="Enter captchas"/>
+            </div>
+
+            <div class="message">
+              
+            </div>
+
+            <div class="input_field button disabled">
+              <button class="submit-btn">Submit Captcha</button>
+            </div>
           </div>
 
-          <div class="message"></div>
-
-          <div class="input_field button disabled">
-            <button class="submit-btn">Submit Captcha</button>
+          <div class="action-buttons">
+            <button class="primary-button">Login</button>
+            <button class="primary-button">Forgot Password?</button>
           </div>
-
-
-        <div class="action-buttons">
-          <button class="primary-button">Login</button>
-          <button class="primary-button">Forgot Password?</button>
         </div>
-
-      </div>
-
-    </div>  
-
-
-
+      </div>  
+    </div>
   </div>
-
-</div>
   <section class="hero">
     <div class="container">
       <h2>The Unstoppable Force of Adarniya Fame</h2>
@@ -210,10 +207,12 @@
           // Events to show/hide modal 
           btn.onclick = function() {
             modal.style.display = "block";
+      
           }
 
           close.onclick = function() {
             modal.style.display = "none";
+       
           }
 
 
@@ -225,11 +224,13 @@
           window.addEventListener("scroll", () => {
             const currentScrollPos = window.pageYOffset;
             if (currentScrollPos > prevScrollPos) {
-              navBar.style.transform = "translateY(-100%)"; // Hide the nav when scrolling down
+              navBar.style.transform = "translateY(-200%)";
+              navBar.style.top=0; // Hide the nav when scrolling down
             } else if (currentScrollPos === 0) {
               navBar.style.transform = "translateY(" + header.offsetHeight + "px)"; // Show the nav just below the header when at the top
             } else {
-              navBar.style.transform = "translateY(0)"; // Show the nav when scrolling up
+              navBar.style.transform = "translateY(0)";
+              navBar.style.top=0; // Show the nav when scrolling up
             }
             prevScrollPos = currentScrollPos;
           });
