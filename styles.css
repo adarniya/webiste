@@ -120,9 +120,7 @@ textarea {
 
 
 
-.form-group {
-  margin-bottom: 1.5rem;
-}
+
 
 label {
   display: block;
@@ -213,7 +211,7 @@ nav a:hover {
 
 .fixed-nav {
   position: fixed;
-  top: 0px;
+
   left: 0;
   width: 100%;
   background-color: #333;
@@ -224,27 +222,7 @@ nav a:hover {
   transform: translateY(0);
   transition: transform 0.3s ease;
 }
-/* Add some margin to the header content so it doesn't overlap with the nav 
-header h1,
-header p {
-  margin-top: 0px;
-}
-/*
-.adjusted-nav {
-  position: relative; /* Adjusted position to be below the header */
-  top: 0;*/
-}
-/* Regular CSS for Light Mode */
-body {
-  background-color: #ffffff;
-  color: #333333;
-}
 
-/* CSS for Dark Mode */
-.dark-mode body {
-  background-color: #333333;
-  color: #ffffff; /* Set text color to white in dark mode */
-}
 
 /* Modal styles */
 .modal {
@@ -256,8 +234,8 @@ body {
   width: 100%; 
   height: 100%;
   overflow: auto; 
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); 
+   backdrop-filter: blur(10px);
+ 
 }
 
 /* Modal Content/Box */
@@ -271,6 +249,7 @@ body {
   margin-inline: 2rem;
   margin: 2rem auto;
 
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -280,6 +259,7 @@ body {
   width: 300px;
   text-align: center;
   margin-inline: auto;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 
 .loginHead {
@@ -354,33 +334,16 @@ input:focus + label {
   font-size: 12px;
 }
 
+.captcha{
+position: relative;
+max-width:300px;
+width: 100%;
+border-radius: 12px;
 
-.action-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-top: 36px;
+background:#fff;
+
 }
 
-.primary-button {
-  width: 100%;
-  border-radius: 20px;
-  padding: 8px 0;
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.primary-button {
-  background-color: transparent;
-  color: #0f1419; 
-}
-
-.primary-button:hover {
-  background-color: #e6e6e6;
-} 
-
-/*
-@import url("https://fonts.googleapis.com/css 2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 .input_field {
 position: relative;
 height: 45px;
@@ -410,6 +373,7 @@ outline: none;
 border: none;
 background: #f9f9f9;
 border-radius: 8px;
+ text-align: center;
 }
 
 .input_field input {
@@ -451,6 +415,30 @@ transform: scale(0.99)
 opacity: 0.6;
 pointer-events: none;
 ;
+}
 
 
-*/
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.primary-button {
+  width: 100%;
+  border-radius: 20px;
+  padding: 8px 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.primary-button {
+  background-color: transparent;
+  color: #0f1419; 
+}
+
+.primary-button:hover {
+  background-color: #e6e6e6;
+} 
+
